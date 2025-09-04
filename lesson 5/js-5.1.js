@@ -1,9 +1,9 @@
 let result= " ";
-
 for (let i = 20; i <=30; i+= 0.5) {
-    result = result +i+ " ";
+    result = result + i+ " ";
+    console.log(result);
 }
-console.log(result);
+
 
 
 const rate = 26 ;
