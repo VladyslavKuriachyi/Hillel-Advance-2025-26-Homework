@@ -45,3 +45,4 @@ if (sport in champions) {
 }
 
 alert(`You are ${age} years old. ${cityMassage}. ${sportMessage}`);
+

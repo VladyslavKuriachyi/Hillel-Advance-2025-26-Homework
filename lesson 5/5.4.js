@@ -1,4 +1,4 @@
-let N =parseInt(prompt("enter an integer"));
+let N = parseInt(prompt("enter an integer"));
 
 for (let i = 2; i <= N; i++) {
     let isPrime = true;
@@ -8,7 +8,7 @@ for (let i = 2; i <= N; i++) {
             break;
         }
     }
-     if (isPrime) {
-         alert(i);
-     }
+    if (isPrime) {
+        alert(i);
+    }
 }
