@@ -1,8 +1,10 @@
-const array = [1, 3, 4, 6, 2, 5, 7];
 
-function removeElementFilters(array, item) {
-    return array.filter(element => element !== item);
+function removeElement (array, item) {
+    const index = array.indexOf(item);
+    if (index !== -1) {
+        array.splice(index, 1);
+    }
 }
-let MyArray = [1, 3, 4, 6, 2, 5, 7]
-let NewArray = removeElementFilters(MyArray, 1, 3, 4, 6, 2, 5, 7);
-console.log(MyArray);
+const array = [1, 3, 4, 6, 2, 5, 7];
+removeElement(array, 4);
+console.log(array);
