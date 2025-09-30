@@ -1,4 +1,4 @@
-const imageFiles =['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+const imageFiles = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
 
 const imgElement = document.getElementById('randomImage');
 
