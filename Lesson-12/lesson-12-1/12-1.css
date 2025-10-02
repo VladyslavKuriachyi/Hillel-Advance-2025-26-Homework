@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: #000;
+}
+
+.save {
+    color: blue;
+    font-weight: bold;
+    font-size: 50px;
+    border: 1px solid darkorange;
+    padding: 5px 10px;
+}
+
+.save:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+.change {
+    color: orange;
+    font-weight: bold;
+    font-size: 50px;
+    border: 1px solid blue;
+    padding: 5px 10px;
+}
+
+.change:hover {
+    background-color: antiquewhite;
+    color: darkgreen;
+    cursor: pointer;
+}
