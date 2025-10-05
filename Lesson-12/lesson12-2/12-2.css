@@ -22,6 +22,7 @@
     font-family: sans-serif;
     border: 1px solid black;
     box-shadow: 0 0 10px 5px black;
+    cursor: pointer;
 }
 
 .child-2 {
@@ -34,6 +35,7 @@
     font-family: sans-serif;
     border: 1px solid black;
     box-shadow: 0 0 10px 5px black;
+    cursor: pointer;
 }
 
 .child-3 {
@@ -46,4 +48,5 @@
     font-family: sans-serif;
     border: 1px solid black;
     box-shadow: 0 0 10px 5px black;
+    cursor: pointer;
 }
