@@ -9,7 +9,7 @@ const dotsContainer = document.createElement('div');
 dotsContainer.classList.add('dots');
 document.body.appendChild(dotsContainer);
 
-slideElements.forEach((_, index)=> {
+slideElements.forEach((_, index) => {
     const dot = document.createElement('span');
     dot.classList.add('dot');
     dot.addEventListener('click', () => {
@@ -18,6 +18,7 @@ slideElements.forEach((_, index)=> {
     });
     dotsContainer.appendChild(dot);
 });
+
 function updateSlider() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 
@@ -25,9 +26,10 @@ function updateSlider() {
     nextBtn.style.display = currentIndex === slideElements.length - 1 ? 'none' : 'block';
 
     const dots = document.querySelectorAll('.dot');
-    dots.forEach( dot =>dot.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
     dots[currentIndex].classList.add('active');
 }
+
 prevBtn.textContent = 'Prev';
 nextBtn.textContent = 'Next';
 
@@ -38,7 +40,7 @@ prevBtn.addEventListener('click', () => {
     }
 });
 nextBtn.addEventListener('click', () => {
-    if(currentIndex < slideElements.length - 1) {
+    if (currentIndex < slideElements.length - 1) {
         currentIndex++;
         updateSlider();
     }
