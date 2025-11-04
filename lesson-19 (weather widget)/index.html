@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="19.css">
+    <title>Weather widget</title>
+</head>
+<body>
+<div class="weather-widget">
+    <h2>Weather in the city</h2>
+
+    <div id="weather-display">
+        <h3 id="city-name">—</h3>
+        <p id="temp">Temperature: —</p>
+        <p id="feels">Feels like: —</p>
+        <p id="cond">Condition: —</p>
+        <p id="humidity">Humidity: —</p>
+        <p id="wind">Wind: —</p>
+    </div>
+
+    <div class="controls" role="search" aria-label="Search weather by city">
+        <label for="city-input" class="visually-hidden">City</label>
+        <input type="text" id="city-input" placeholder="Enter the city name" />
+        <button id="search-btn" type="button">Search</button>
+    </div>
+</div>
+
+
+        <script src="19.js"></script>
+</body>
+</html>
