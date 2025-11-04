@@ -9,6 +9,7 @@ const windEl = document.getElementById('wind');
 
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
+const refreshBtn = document.getElementById('refresh-btn');
 
 async function fetchWeatherData(city) {
     if (!city) return;
@@ -60,5 +61,14 @@ cityInput.addEventListener('keydown', (event) => {
         searchBtn.click();
     }
 });
+refreshBtn.addEventListener('click', () => {
+    const city = cityInput.value.trim();
+    if (!city) {
+        void fetchWeatherData('London');
+    }
+    else {
+        void fetchWeatherData(city);
+    }
+})
 
  void fetchWeatherData('London');
