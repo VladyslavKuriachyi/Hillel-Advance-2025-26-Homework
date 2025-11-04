@@ -22,12 +22,12 @@ async function fetchWeatherData(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${apiKey}&lang=en`;
 
     try {
-        const res = await fetch(apiUrl);
-        if (!res.ok) {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
             cityNameEl.textContent = 'City not found';
             return;
         }
-        const data = await res.json();
+        const data = await response.json();
         displayWeatherData(data);
     } catch (err) {
         console.error('Fetch error', err);
