@@ -29,8 +29,8 @@ async function fetchWeatherData(city) {
         }
         const data = await response.json();
         displayWeatherData(data);
-    } catch (err) {
-        console.error('Fetch error', err);
+    } catch (error) {
+        console.error('Fetch error', error);
         cityNameEl.textContent = 'Error fetching data';
     }
 }
@@ -54,9 +54,9 @@ searchBtn.addEventListener('click', () => {
     void fetchWeatherData(city);
 });
 
-cityInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        e.preventDefault();
+cityInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
         searchBtn.click();
     }
 });
