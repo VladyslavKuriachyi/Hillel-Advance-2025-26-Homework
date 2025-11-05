@@ -11,9 +11,14 @@ const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 const refreshBtn = document.getElementById('refresh-btn');
 
+let currentCity = 'London';
+
 async function fetchWeatherData(city) {
+
     if (!city) return;
-    cityNameEl.textContent = 'Loading...';
+    currentCity = city;
+
+    cityNameEl.textContent = `Loading: ${city}`;
     tempEl.textContent = '';
     feelsEl.textContent = '';
     condEl.textContent = '';
@@ -52,7 +57,7 @@ searchBtn.addEventListener('click', () => {
         cityInput.focus();
         return;
     }
-    void fetchWeatherData(city);
+    fetchWeatherData(city);
 });
 
 cityInput.addEventListener('keydown', (event) => {
@@ -61,14 +66,9 @@ cityInput.addEventListener('keydown', (event) => {
         searchBtn.click();
     }
 });
-refreshBtn.addEventListener('click', () => {
-    const city = cityInput.value.trim();
-    if (!city) {
-        void fetchWeatherData('London');
-    }
-    else {
-        void fetchWeatherData(city);
-    }
-})
 
- void fetchWeatherData('London');
+refreshBtn.addEventListener('click', () => {
+    fetchWeatherData(currentCity);
+});
+
+fetchWeatherData('London');
